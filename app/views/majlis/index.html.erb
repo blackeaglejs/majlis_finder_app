@@ -1,0 +1,8 @@
+<h1>Majlis Finder</h1>
+
+The best place to find a majlis!
+
+<% if !user_signed_in? %>
+  <p>New to Majlis Finder? <%= link_to 'Sign Up!', new_user_registration_path %></p>
+  <p>Already a member? <%= link_to 'Sign In', new_user_session_path %></p>
+<% end %>
