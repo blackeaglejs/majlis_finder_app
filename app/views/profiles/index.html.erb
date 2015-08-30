@@ -1,0 +1,16 @@
+<% if user_signed_in? and @user.profile %>
+	<%= @user.profile.name %><br>
+	<%= @user.email %><br>
+	<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+<% end %>
+<h1>All Parents</h1>
+
+<% @profiles.each do |profile| %>
+	<% if profile.role == 'admin' %>
+	<%= profile.name %><br>
+	<%= profile.phone %><br>
+	<%= profile.zip %>
+	<% else %>
+	You don't have permission to view this page.
+	<% end %>
+<% end %>

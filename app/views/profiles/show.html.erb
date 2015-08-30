@@ -1,0 +1,20 @@
+<h1><%= @profile.name %></h1>
+
+Your Phone Number:<br>
+<%= @profile.phone %><br><br>
+
+Your Zip Code:<br>
+<%= @profile.zip %><br><br>
+
+Your Email:<br>
+<%= @user.email %><br><br>
+
+<%= link_to 'Edit Your Profile', edit_profile_path %><br><br>
+
+<%= link_to 'Change Your Email or Password', edit_user_registration_path %><br><br>
+
+<%= link_to 'Home Page', root_path %><br><br>
+
+<% if user_signed_in? and @user.profile %>
+	<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+<% end %>

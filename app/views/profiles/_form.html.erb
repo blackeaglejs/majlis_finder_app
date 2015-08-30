@@ -1,0 +1,25 @@
+<%= form_for [@profile] do |f| %>
+	 <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %> 
+    </div>
+  <br>
+    <div class="field">
+      <%= f.label 'Phone Number' %><br />
+      <%= f.text_field :phone %>
+    </div>
+  <br>
+    <div class="field">
+      <%= f.label 'Zip Code' %><br />
+      <%= f.text_field :zip %>
+    </div>
+  <br>
+    <div class="field">
+      <% f.label 'Role' %>
+      <% f.select :role, [['User','app_user'],['Administrator','admin']] %>
+    </div>
+  <br>
+    <div class="actions">
+      <%= f.submit "Save" %>
+    </div>
+<% end %>
