@@ -1,3 +1,9 @@
+<% if user_signed_in? and current_user.profile %>
+  Signed in as <%= current_user.profile.name %>
+<% elsif user_signed_in? %>
+  Signed in as <%= current_user.email %>.
+<% end %>
+
 <h1>Majlis Finder</h1>
 
 The best place to find a majlis!
