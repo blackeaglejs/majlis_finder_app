@@ -29,7 +29,6 @@ class ProfilesController < ApplicationController
 	end
 
 	def update
-		# I need to figure out how to handle authentication so that the user can only edit their profile.
 		@profile.update(profile_params)
 		if @profile.update(profile_params)
 			redirect_to profile_path(@profile.id)

@@ -9,7 +9,7 @@ Your Zip Code:<br>
 Your Email:<br>
 <%= @user.email %><br><br>
 
-<%= link_to 'Edit Your Profile', edit_profile_path %><br><br>
+<%= link_to 'Edit Your Profile', edit_profile_path(current_user.profile) %><br><br>
 
 <%= link_to 'Change Your Email or Password', edit_user_registration_path %><br><br>
 
