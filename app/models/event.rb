@@ -1,3 +1,4 @@
-class Event << ActiveRecord::Base
-	has_and_belongs_to_many :profiles
+class Event < ActiveRecord::Base
+	belongs_to :profile, dependent: :destroy
+	has_many :guests
 end
